@@ -1,5 +1,3 @@
-// CurrentConditionsDisplay.ts
-
 import { WeatherData } from './WeatherData';
 import { DisplayElement, Observer } from './weather.model';
 

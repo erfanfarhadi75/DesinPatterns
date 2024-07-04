@@ -1,4 +1,3 @@
-// Subject.ts
 
 export interface Subject {
   registerObserver(o: Observer): void;
@@ -6,13 +5,11 @@ export interface Subject {
   notifyObservers(): void;
 }
 
-// Observer.ts
 
 export interface Observer {
   update(temp: number, humidity: number, pressure: number): void;
 }
 
-// DisplayElement.ts
 
 export interface DisplayElement {
   display(): void;

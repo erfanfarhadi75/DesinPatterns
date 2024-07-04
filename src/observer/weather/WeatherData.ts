@@ -1,5 +1,3 @@
-// WeatherData.ts
-
 import { Observer, Subject } from "./weather.model";
 
 
