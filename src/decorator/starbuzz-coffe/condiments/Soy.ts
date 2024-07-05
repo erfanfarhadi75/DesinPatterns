@@ -1,5 +1,6 @@
 import { CondimentDecorator } from './CondimentDecorator';
 import { Beverage } from '../beverages/Beverage';
+import { BeverageSizeEnum } from '../beverages/beverage-size.enum';
 
 export class Soy extends CondimentDecorator {
     private beverage: Beverage;
@@ -14,6 +15,17 @@ export class Soy extends CondimentDecorator {
     }
 
     cost(): number {
-        return this.beverage.cost() + 0.15; // Cost of Soy
+        switch(this.getSize()) { 
+            case BeverageSizeEnum.GRANDE: { 
+                return this.beverage.cost() + 0.15
+            } 
+            case BeverageSizeEnum.TALL: { 
+                return this.beverage.cost() + 0.20
+            } 
+            case BeverageSizeEnum.VENTI: { 
+                return this.beverage.cost() + 0.25
+             } 
+        
+         } 
     }
 }

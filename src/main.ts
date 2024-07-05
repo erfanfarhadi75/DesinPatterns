@@ -16,7 +16,7 @@ import { Whip } from "./decorator/starbuzz-coffe/condiments/Whip";
 //   weatherData.setMeasurements(Math.random().toFixed(1), 65, 30.4);
 // }, 500);
 // Create a Latte
-let beverage = new Latte(BeverageSizeEnum.TALL);
+let beverage = new Latte(BeverageSizeEnum.VENTI);
 
 // Add Soy
 beverage = new Soy(beverage);
