@@ -1,13 +1,26 @@
 import { Beverage } from "./Beverage";
+import { BeverageSizeEnum } from "./beverage-size.enum";
 
 
 export class Latte extends Beverage {
-    constructor() {
+    constructor(size:BeverageSizeEnum) {
         super();
-        this.description = "Latte";
+        this.setSize(size);
+        this.setDescription("Latte");
     }
 
     cost(): number {
-        return 2.49; // Cost of Latte
+        switch(this.getSize()) { 
+            case BeverageSizeEnum.GRANDE: { 
+               return 2.49
+            } 
+            case BeverageSizeEnum.TALL: { 
+                return 3.49
+            } 
+            case BeverageSizeEnum.VENTI: { 
+                return 4.49
+             } 
+        
+         } 
     }
 }
