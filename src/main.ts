@@ -8,6 +8,8 @@ import { BeverageSizeEnum } from "./decorator/starbuzz-coffe/beverages/beverage-
 import { Mocha } from "./decorator/starbuzz-coffe/condiments/Mocha";
 import { Soy } from "./decorator/starbuzz-coffe/condiments/Soy";
 import { Whip } from "./decorator/starbuzz-coffe/condiments/Whip";
+import { ChicagoPizzaStore } from "./factory/pizza-factory-method/stores/ChicagoPizzaStore";
+import { NYPizzaStore } from "./factory/pizza-factory-method/stores/NYPizzaStore";
 
 // const weatherData = new WeatherData();
 // const currentDisplay = new CurrentConditionsDisplay(weatherData);
@@ -38,3 +40,13 @@ document.querySelector<HTMLDivElement>(
 ${beverage.getDescription()}
 ${beverage.cost()}
 `;
+
+
+const nyStore = new NYPizzaStore();
+const chicagoStore = new ChicagoPizzaStore();
+
+let pizza = nyStore.orderPizza("cheese");
+console.log(`Ordered a ${pizza.getName()}\n`);
+
+pizza = chicagoStore.orderPizza("clam");
+console.log(`Ordered a ${pizza.getName()}\n`);
