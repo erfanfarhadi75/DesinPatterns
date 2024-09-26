@@ -4,11 +4,11 @@ export abstract class Beverage {
     private description: string = "Unknown Beverage";
     private size = BeverageSizeEnum.TALL;
 
-    getSize():BeverageSizeEnum{
+    getSize(): BeverageSizeEnum {
         return this.size;
     }
 
-    setSize(size:BeverageSizeEnum):void{
+    setSize(size: BeverageSizeEnum): void {
         this.size = size;
     }
 
@@ -16,9 +16,10 @@ export abstract class Beverage {
         return this.description;
     }
 
-    setDescription(description:string):void{
+    setDescription(description: string): void {
         this.description = description;
     }
+
 
     abstract cost(): number;
 }
